@@ -24,25 +24,30 @@ class SchoolPage extends StatelessWidget {
         scrollDirection: Axis.horizontal,
       ),
       items: [
-        "assets/mark.jpg",
-        "assets/tree.jpg",
-        "assets/ghjgh.jpg",
-        "assets/gty.jpg",
-        "assets/hjk.jpg",
+        // "assets/mark.jpg",
+        // "assets/tree.jpg",
+        // "assets/ghjgh.jpg",
+        // "assets/gty.jpg",
+        // "assets/hjk.jpg",
         "assets/olp.jpg",
         "assets/jkl.jpg"
       ].map((i) {
         return Builder(
           builder: (BuildContext context) {
-            return Container(
-              width: MediaQuery.of(context).size.width,
-              margin: const EdgeInsets.symmetric(horizontal: 2.0),
-              decoration: const BoxDecoration(
-                color: Colors.amber,
+            return Padding(
+              padding: const EdgeInsets.symmetric(
+                vertical: 20,
               ),
-              child: Image.asset(
-                i,
-                fit: BoxFit.fill,
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                margin: const EdgeInsets.symmetric(horizontal: 2.0),
+                decoration: const BoxDecoration(
+                  color: Colors.amber,
+                ),
+                child: Image.asset(
+                  i,
+                  fit: BoxFit.fill,
+                ),
               ),
             );
           },

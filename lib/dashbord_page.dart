@@ -24,18 +24,19 @@ class _DashboardPageState extends State<DashboardPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const NavDrawer(),
+      drawer: NavDrawer(),
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
-        title: const Text('Page title'),
-        actions: const [
-          Icon(Icons.favorite),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: Icon(Icons.search),
-          ),
-          Icon(Icons.more_vert),
-        ],
+        // leading: const Icon(Icons.menu),
+        // title: const Text('Page title'),
+        // actions: const [
+        //   Icon(Icons.favorite),
+        //   Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 16),
+        //     child: Icon(Icons.search),
+        //   ),
+        //   Icon(Icons.more_vert),
+        // ],
+        title: const Text('Side menu'),
         backgroundColor: Colors.purple,
       ),
       body: pages[selectedIndex],

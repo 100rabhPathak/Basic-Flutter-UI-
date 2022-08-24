@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:help/setting_page.dart';
 
 class NavDrawer extends StatelessWidget {
   const NavDrawer({Key? key}) : super(key: key);
@@ -15,14 +16,23 @@ class NavDrawer extends StatelessWidget {
                 image: DecorationImage(
                     fit: BoxFit.fill, image: AssetImage('assets/tree.jpg'))),
             child: Text(
-              'Side menu',
-              style: TextStyle(color: Colors.white, fontSize: 25),
+              'Hello Saurabh',
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 25,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           ListTile(
             leading: const Icon(Icons.input),
             title: const Text('Welcome'),
-            onTap: () => {},
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const SettingPage(),
+                ),
+              );
+            },
           ),
           ListTile(
             leading: const Icon(Icons.verified_user),
